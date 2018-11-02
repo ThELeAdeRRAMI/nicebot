@@ -8,7 +8,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Death Shop`,"http://twitch.tv/Death Shop")
+client.user.setGame(`TM CLAN System`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
@@ -292,7 +292,7 @@ client.on("message", function(message) {
     var args = message.content.split(/ +/g);
     var command = args.shift()
     
-    if(command == "=s") {
+    if(command == "+s") {
         message.channel.send(args.slice(1, args.length).join(" "))    
     }
 });
