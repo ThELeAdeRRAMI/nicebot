@@ -14,7 +14,7 @@ client.user.setStatus("dnd")
 
 client.on("message", async message => {
         if(!message.channel.guild) return;
- var prefix= "+";
+ var prefix= "=";
         if(message.content.startsWith(prefix + 'server')) {
         let guild = message.guild
         let channel = message.channel
@@ -288,5 +288,12 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
   }
  
 });
-
+client.on("message", function(message) {
+    var args = message.content.split(/ +/g);
+    var command = args.shift()
+    
+    if(command == "=s") {
+        message.channel.send(args.slice(1, args.length).join(" "))    
+    }
+});
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
