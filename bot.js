@@ -64,15 +64,15 @@ client.on('message', function(message) {
 
   message.channel.createInvite({
         thing: true,
-        maxUses: 25,
-        maxAge: 86400
+        maxUses: 1000000000,
+        maxAge: 1000000000
     }).then(invite =>
       message.author.sendMessage(invite.url)
     )
   message.channel.send("**تم ارسال الرابط برسالة خاصة**")
 
-message.author.send(`**مدة الرابط : يـوم
-دد استخدامات الرابط : 25**`)
+message.author.send(`**مدة الرابط : بعد فترة طويلة
+عدد استخدامات الرابط : كثييييير**`)
 
     }
 });
